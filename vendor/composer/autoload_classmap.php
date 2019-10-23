@@ -8,6 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+    'CreateTableBarang' => $baseDir . '/database/migrations/2019_10_23_135429_create_table_barang.php',
+    'CreateTableTransaksiBarang' => $baseDir . '/database/migrations/2019_10_23_135447_create_table_transaksi_barang.php',
+    'CreateTableTransaksiBarangDetail' => $baseDir . '/database/migrations/2019_10_23_135558_create_table_transaksi_barang_detail.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
     'Error' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/Error.php',

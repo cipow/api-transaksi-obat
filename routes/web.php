@@ -14,3 +14,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'barang'], function() use ($router) {
+    $router->get('/', 'Barang\Barang@list');
+    $router->post('/', 'Barang\Barang@store');
+    $router->get('/{id}', 'Barang\Barang@get');
+    $router->put('/{id}', 'Barang\Barang@update');
+    $router->delete('/{id}', 'Barang\Barang@delete');
+});

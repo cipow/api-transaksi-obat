@@ -337,6 +337,9 @@ class ComposerStaticInitff0f9609a21574cfeef02a0236984c55
     public static $classMap = array (
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'CreateTableBarang' => __DIR__ . '/../..' . '/database/migrations/2019_10_23_135429_create_table_barang.php',
+        'CreateTableTransaksiBarang' => __DIR__ . '/../..' . '/database/migrations/2019_10_23_135447_create_table_transaksi_barang.php',
+        'CreateTableTransaksiBarangDetail' => __DIR__ . '/../..' . '/database/migrations/2019_10_23_135558_create_table_transaksi_barang_detail.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
