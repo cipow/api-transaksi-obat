@@ -10,8 +10,6 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Validator;
 
 class Barang extends Controller {
-
-    private $barang;
     
     public function __construct() {
         parent::__construct();

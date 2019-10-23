@@ -17,7 +17,8 @@ class CreateTableTransaksiBarangDetail extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('tr_barang_id');
             $table->unsignedBigInteger('mr_barang_id');
-            $table->double('jumlah')->default(0);
+            $table->double('harga')->default(0);
+            $table->integer('jumlah')->default(0);
             $table->double('total')->default(0);
 
             $table->foreign('tr_barang_id')
