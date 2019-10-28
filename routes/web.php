@@ -28,3 +28,9 @@ $router->group(['prefix' => 'transaksi'], function() use ($router) {
     $router->post('/', 'Barang\Transaksi@store');
     $router->get('/{id}', 'Barang\Transaksi@get');
 });
+
+
+$router->group(['prefix' => 'auth'], function() use ($router) {
+    $router->post('/login', 'Account@login');
+
+});
