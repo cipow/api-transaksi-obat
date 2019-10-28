@@ -35,7 +35,10 @@ class Transaksi extends Controller {
             'barang as jumlah_total_barang' => function($q) {
                 $q->select(\DB::raw("CAST(SUM(tr_barang_detail.jumlah) as SIGNED)"));
             }
-        ])->whereBetween('created_at', [$startDate, $endDateTransaction])->get();
+        ])
+        ->whereBetween('created_at', [$startDate, $endDateTransaction])
+        ->with('barang')
+        ->get();
 
 
         return $this->response->success([
