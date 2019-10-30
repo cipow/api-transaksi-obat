@@ -20,12 +20,14 @@ class Transaksi extends Controller {
     public function list(Request $req) {
         if ($req->filled('start')) $startDate = $req->start;
         else {
-            $startDate = TransaksiBarang::orderBy('created_at', 'asc')->first()->created_at->format("Y-m-d");
+            $startDateModel = TransaksiBarang::orderBy('created_at', 'asc')->first();
+            $startDate = $startDateModel ? $startDateModel->created_at->format("Y-m-d"):Carbon::now()->format("Y-m-d");
         }
         
         if ($req->filled('end')) $endDate = $req->end;
         else {
-            $endDate = TransaksiBarang::orderBy('created_at', 'desc')->first()->created_at->format("Y-m-d");
+            $endDateModel = TransaksiBarang::orderBy('created_at', 'desc')->first();
+            $endDate = $endDateModel ? $endDateModel->created_at->format("Y-m-d"):Carbon::now()->format("Y-m-d");
         }
 
         $endDateTransaction = (new Carbon($endDate))->addDay(1);
