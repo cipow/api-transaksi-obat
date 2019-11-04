@@ -121,4 +121,13 @@ class Transaksi extends Controller {
         }
 
     }
+
+    public function delete($id) {
+        $transaksi = TransaksiBarang::find($id);
+        $kode = $transaksi->kode;
+        $transaksi->delete();
+        return $this->response->success([
+            'message' => 'transaksi dengan kode '.$kode.' sudah dihapus'
+        ]);
+    }
 }
